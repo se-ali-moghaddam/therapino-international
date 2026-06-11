@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    direction: ltr;
+  }
+
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-calm-800 antialiased;
+    direction: ltr;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-calm-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-calm-300 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-calm-400;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-700 transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-primary-600 border border-primary-200 px-6 py-3 rounded-xl font-semibold hover:bg-primary-50 transition-all duration-200;
+  }
+
+  .btn-teal {
+    @apply bg-teal-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-teal-700 transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-calm-100 p-6;
+  }
+
+  .card-hover {
+    @apply card hover:shadow-md hover:-translate-y-1 transition-all duration-300;
+  }
+
+  .input-field {
+    @apply w-full border border-calm-200 rounded-xl px-4 py-3 text-calm-800 placeholder-calm-400 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-400 transition-all duration-200 bg-white;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-calm-900 mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-calm-500 mb-12;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-primary {
+    @apply badge bg-primary-100 text-primary-700;
+  }
+
+  .badge-teal {
+    @apply badge bg-teal-100 text-teal-700;
+  }
+
+  .badge-success {
+    @apply badge bg-success-100 text-success-700;
+  }
+
+  .badge-warning {
+    @apply badge bg-warning-100 text-warning-700;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-teal-600 bg-clip-text text-transparent;
+  }
+
+  .bg-mesh {
+    background-image: radial-gradient(at 60% 20%, hsla(199, 100%, 95%, 0.8) 0px, transparent 50%),
+                      radial-gradient(at 20% 0%, hsla(175, 100%, 95%, 0.6) 0px, transparent 50%),
+                      radial-gradient(at 100% 50%, hsla(222, 100%, 97%, 0.8) 0px, transparent 50%),
+                      radial-gradient(at 20% 50%, hsla(175, 100%, 96%, 0.5) 0px, transparent 50%),
+                      radial-gradient(at 100% 100%, hsla(199, 100%, 96%, 0.7) 0px, transparent 50%);
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-sm border border-white/50;
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 30px rgba(59, 151, 243, 0.15);
+  }
+
+  .shadow-teal-glow {
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.15);
+  }
+}
