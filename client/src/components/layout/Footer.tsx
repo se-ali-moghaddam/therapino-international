@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Brain, Instagram, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Brain, Mail, Phone, MapPin } from 'lucide-react';
+import { FaInstagram as Instagram, FaXTwitter as Twitter, FaLinkedin as LinkedIn } from "react-icons/fa6";
 
 const footerLinks = {
   platform: [
@@ -41,7 +42,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <a href="#" className="w-9 h-9 rounded-xl bg-calm-800 flex items-center justify-center text-calm-400 hover:text-white hover:bg-primary-600 transition-all"><Instagram size={16} /></a>
               <a href="#" className="w-9 h-9 rounded-xl bg-calm-800 flex items-center justify-center text-calm-400 hover:text-white hover:bg-primary-600 transition-all"><Twitter size={16} /></a>
-              <a href="#" className="w-9 h-9 rounded-xl bg-calm-800 flex items-center justify-center text-calm-400 hover:text-white hover:bg-primary-600 transition-all"><Linkedin size={16} /></a>
+              <a href="#" className="w-9 h-9 rounded-xl bg-calm-800 flex items-center justify-center text-calm-400 hover:text-white hover:bg-primary-600 transition-all"><LinkedIn size={16} /></a>
             </div>
           </div>
 
